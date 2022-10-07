@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Letra DNI</h1>
+    <label>Introduzca el DNI</label>
+    <input type="text" id="cajadni"/>
+    <button type="button" onclick="letraDni()">
+        Mostrar letra DNI
+    </button>
+    <h2 id="resultado"></h2>
+</body>
+<script>
+    function letraDni(){
+    var caja =document.getElementById("cajadni");
+    if (caja.value == ""){
+        caja.style.backgroundColor = "red";
+        }else{
+        caja.style.backgroundColor = "green";
+
+    var caja1 = parseInt(caja.value);
+    
+    var resultadoDNI ="TRWAGMYFPDXBNJZSQVHLCKET"
+
+    var formula= (caja1 - (parseInt(caja1/23)*23));
+    var letraDni = resultadoDNI.charAt(formula);
+            document.getElementById("resultado").innerText = 
+            "Letra: " + letraDni;
+;
+    }
+}
+</script>
+</html>
